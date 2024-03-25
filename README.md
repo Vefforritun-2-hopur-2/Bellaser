@@ -23,8 +23,11 @@ User Stories:
 4. **Að vera gæludýravörð:**
     Anna ákveður að bjóða þjónustu sína sem gæludýravörður á Bellaser. Hún skapar velkominn prófíl og laðar fljótt að sér gæludýraeigendur sem leita að umhyggjusömum og áreiðanlegum fóstru. Anna nýtur þess að hýsa hunda á heimili sínu, veita þeim ást, athygli og nóg af göngutúrum. Í gegnum Bellaser fyllir Anna dagana sína ekki aðeins af gleðinni við að sjá um gæludýr heldur aflar hún sér líka smá aukatekna til að bæta við eftirlaunin.
 
-Figma BTS: https://www.figma.com/file/fHvDNlb2XIuve4NpSjSykb/Bellaser?type=design&node-id=0%3A1&mode=design&t=p98RlXWyEjtaXzxu-1
+Figma YouTube sýning: https://youtu.be/9gCfWpOVHu4
 
 Figma page: https://www.figma.com/proto/fHvDNlb2XIuve4NpSjSykb/Bellaser?type=design&node-id=12-8&t=p98RlXWyEjtaXzxu-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=12%3A8
 
+Figma BTS: https://www.figma.com/file/fHvDNlb2XIuve4NpSjSykb/Bellaser?type=design&node-id=0%3A1&mode=design&t=p98RlXWyEjtaXzxu-1
+
+Wireflows:
 ![Alt text](artboard.jpg)
