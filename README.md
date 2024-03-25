@@ -29,6 +29,7 @@ Figma YouTube sýning: https://youtu.be/9gCfWpOVHu4
 Figma page: https://www.figma.com/proto/fHvDNlb2XIuve4NpSjSykb/Bellaser?type=design&node-id=12-8&t=p98RlXWyEjtaXzxu-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=12%3A8
 
 Figma BTS: https://www.figma.com/file/fHvDNlb2XIuve4NpSjSykb/Bellaser?type=design&node-id=0%3A1&mode=design&t=p98RlXWyEjtaXzxu-1
+![Alt text](figmaPage.jpg)
 
 ---
 ### Wireflows:
