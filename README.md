@@ -8,6 +8,7 @@ Nafn á appi: Bellaser “Um gæludýrirð þitt”
 Hvað er þetta?:
 App sem leyfir þér að setja inn dýr og óska eftir pössun eða að fara í göngutúr gegn greiðslu. 
 Svo er fólk sem býður sig fram til þess að hugsa um dýrin.
+
 ---
 ### User Stories:
 1. **Hundagönguþjónusta þarf:**
