@@ -1,4 +1,4 @@
-# Vefforritun-2-hopur-2-Lokaverkefni
+# Bellaser
 
 
 Deilihagkerfi fyrir gæludýraþjonustur, svipað eins og airbnb eða uber.  Það eru tveir markhópur semsagt kaupendur gæludýraeigendur og seljendur þjónustufulltrúi. Þjónustufulltrúi eru fagmenn gæludýra, námsmenn, fjölskyldur og aðrir
