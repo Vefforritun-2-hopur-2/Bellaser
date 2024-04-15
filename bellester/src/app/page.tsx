@@ -1,5 +1,5 @@
 //import Image from "next/image";
-import Linkbutton from "./tstest"
+import Linkbutton from "../components"
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
 
       <h1>test page</h1>
 
-      < Linkbutton props="test" />
+      < Linkbutton link="test"/>
     </main>
   );
 }

@@ -1,12 +1,8 @@
 //setja in functions hér sem er hægt að importa
 
-interface proper{
-    link:string
-}
-
-export default function Linkbutton(proper)
+export default function Linkbutton(props:{link:string})
 {
 
-    <a href={proper}>test link med {prop}</a>
+    return <a href={props.link}></a>
 
 }
