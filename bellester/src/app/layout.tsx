@@ -1,7 +1,6 @@
 // layout.tsx
 import React from 'react';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import {Navbar,Footer} from '../components';
 import './globals.css'; 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {

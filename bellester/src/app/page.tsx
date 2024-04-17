@@ -1,13 +1,12 @@
-//import Image from "next/image";
-import Linkbutton from "../components"
+import React from 'react';
 
-export default function Home() {
+const Home = () => {
   return (
-    <main>
-
-      <h1>test page</h1>
-
-      < Linkbutton link="test"/>
-    </main>
+    <div>
+      <h1>Welcome to the Home Page</h1>
+      {/* Meira innihald hér */}
+    </div>
   );
-}
+};
+
+export default Home;
