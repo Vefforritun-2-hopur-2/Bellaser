@@ -1,12 +1,12 @@
 import React from 'react';
+import {Linkbutton} from '../components'
 
-const Home = () => {
+export default function Home() {
   return (
     <div>
       <h1>Welcome to the Home Page</h1>
       {/* Meira innihald hér */}
+      <Linkbutton link='about' text='about us'/>
     </div>
   );
 };
-
-export default Home;
