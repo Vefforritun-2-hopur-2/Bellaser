@@ -1,12 +1,15 @@
 import React from 'react';
-import {Linkbutton} from '../components'
+import { Header, Footer, Navbar } from '../components'; // Adjust the path accordingly
 
-export default function Home() {
+function App() {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      {/* Meira innihald hér */}
-      <Linkbutton link='about' text='about us'/>
+      <Header />
+      {/* Other content of your application */}
+      <Navbar />
+      <Footer />
     </div>
   );
-};
+}
+
+export default App;
