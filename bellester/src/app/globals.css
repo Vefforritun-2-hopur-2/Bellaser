@@ -31,16 +31,16 @@
   transform-origin: 1px;
 }
 
-/* Fela sjálfgefnan checkbox - ef þú notar Tailwind, þá er .sr-only klassinn til þess */
+/* Fela sjálfgefnan checkbox */
 .nav-toggle {
   display: none;
 }
 
-/* Við skulum bæta við grunn útliti fyrir valmyndina þegar hún er sýnileg */
+/* grunn útlit fyrir valmyndina þegar hún er sýnileg */
 .nav-menu {
   display: none; /* Byrja með að fela valmyndina */
   flex-direction: column;
-  width: 100%; /* Full breidd */
+  width: 100%; 
   text-align: left;
 }
 
