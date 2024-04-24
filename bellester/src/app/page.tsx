@@ -1,6 +1,7 @@
 import React from 'react';
 import {Linkbutton} from '../components'
 
+
 export default function Home() {
   return (
     <div>
