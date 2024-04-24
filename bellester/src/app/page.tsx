@@ -1,14 +1,13 @@
-//import Image from "next/image";
-import Linkbutton from "../components"
+import React from 'react';
+import {Linkbutton} from '../components'
 
 
 export default function Home() {
   return (
-    <main>
-
-      <h1>test page</h1>
-
-      < Linkbutton link="test"/>
-    </main>
+    <div>
+      <h1>Welcome to the Home Page</h1>
+      {/* Meira innihald hér */}
+      <Linkbutton link='about' text='about us'/>
+    </div>
   );
-}
+};
