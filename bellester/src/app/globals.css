@@ -18,6 +18,7 @@
 }
 
 body {
+  margin-top: 10%;
   color: black;
   background-color: white;
 }
@@ -37,16 +38,6 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-}
-
-header a{
-  color: white;
-  transition: transform 0.2s;
-}
-
-header a:hover{
-  text-decoration: underline;
-  transform: scale(1.1);
 }
 
 .headerDiv {
@@ -86,7 +77,7 @@ header a:hover{
   font-size: 40px;
 }
 
-nav {
+.dogBar{
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -98,6 +89,41 @@ nav {
   border-bottom-right-radius: 20px;
   box-shadow: var(--shadow);
   color: black;
+}
+
+.navBar{
+  text-align: center;
+  background-color: #e6f0ff;
+  width: 7%;
+  padding: 10px;
+  border-bottom-right-radius: 15px;
+  box-shadow: var(--shadow);
+  color: black;
+}
+
+.navbar a{
+  background-color: white;
+  width: 100%;
+  padding: 5%;
+  border-radius: 10px;
+  margin: 5px;
+  display: block;
+  margin-right: auto;
+  margin-left: 0px;
+}
+
+.navbar a:hover{
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.navBar a{
+  color: black;
+  background-color: white;
+}
+
+.navbar a:hover{
+  text-decoration: none;
 }
 
 .nav-button{
