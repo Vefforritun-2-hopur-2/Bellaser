@@ -2,7 +2,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import RootLayout from '../app/layout';
-import '../app/globals.css'; // Passaðu að slóðin sé rétt
+import '../app/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -2,6 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem; /* Breidd á hamborgaratákni */
+  height: 2rem; /* Hæð á hamborgaratákni */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.navbar-toggle:focus {
+  outline: none;
+}
+
+/* Fyrir hverja bar (línu) í hamborgaratákni */
+.navbar-toggle span {
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* Fela sjálfgefnan checkbox - ef þú notar Tailwind, þá er .sr-only klassinn til þess */
+.nav-toggle {
+  display: none;
+}
+
+/* Við skulum bæta við grunn útliti fyrir valmyndina þegar hún er sýnileg */
+.nav-menu {
+  display: none; /* Byrja með að fela valmyndina */
+  flex-direction: column;
+  width: 100%; /* Full breidd */
+  text-align: left;
+}
+
+/* Sýnir valmyndina þegar checkboxið er hakað */
+.nav-toggle:checked ~ .nav-menu {
+  display: flex;
+}
+
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
