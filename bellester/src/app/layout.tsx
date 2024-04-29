@@ -1,4 +1,4 @@
-// layout.tsx
+// Main síða
 import React from 'react';
 import {Header, Footer} from '../components';
 import './globals.css'; 

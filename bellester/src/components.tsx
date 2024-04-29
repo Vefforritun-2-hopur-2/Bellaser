@@ -21,14 +21,16 @@ export const Header = () =>{
             <button className="nav-button">Filters <i className="fa fa-th-list"></i></button>
         </nav>
 
-        <nav className="navBar">
-          <ul>
-            <li><Linkbutton link='/' text='Home'/></li>
-            <li><Linkbutton link='about' text='About Us'/></li>
-            <li><Linkbutton link='contact' text='Contact'/></li>
-            <li><Linkbutton link='help' text='Help'/></li>
-          </ul>
-        </nav>
+        <div className="nav-menu hidden absolute top-full left-0 w-full bg-gray-800">
+          <nav className="navBar">
+            <ul>
+              <li><Linkbutton link='/' text='Home'/></li>
+              <li><Linkbutton link='about' text='About Us'/></li>
+              <li><Linkbutton link='contact' text='Contact'/></li>
+              <li><Linkbutton link='help' text='Help'/></li>
+            </ul>
+          </nav>
+        </div>
   </header>
   );
 };
