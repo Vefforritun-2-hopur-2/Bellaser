@@ -2,6 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  background-color: rgb(69, 128, 187);
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.navbar-toggle:hover{
+  transform: scale(1.1);
+}
+
+.navbar-toggle:focus {
+  outline: none;
+}
+
+/* Fyrir hverja bar (línu) í hamborgaratákni */
+.navbar-toggle span {
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  transform-origin: 1px;
+}
+
+/* Fela sjálfgefnan checkbox */
+.nav-toggle {
+  display: none;
+}
+
+
+/* grunn útlit fyrir valmyndina þegar hún er sýnileg */
+.nav-menu {
+  display: none; /* Byrja með að fela valmyndina */
+  flex-direction: column;
+  width: 12%; 
+  text-align: center;
+  padding: 5px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e6f0ff;
+  box-shadow: var(--shadow);
+}
+
+.nav-menu a{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 5%;
+  margin: 5px;
+  box-shadow: var(--shadow);
+}
+
+.nav-menu a:hover{
+  background-color: #f2f2f2;
+}
+
+/* Sýnir valmyndina þegar checkboxið er hakað */
+.nav-toggle:checked ~ .nav-menu {
+  display: flex;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,7 +101,7 @@
 }
 
 body {
-  margin-top: 10%;
+  margin-top: 8%;
   color: black;
   background-color: white;
 }
@@ -77,52 +160,15 @@ header {
 }
 
 .dogBar{
-  display: block;
   margin-right: auto;
   margin-left: auto;
   background-color: #e6f0ff;
-  padding: 10px;
   width: 40%;
   text-align: center;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: var(--shadow);
+  border-radius: 20px;
   color: black;
-}
-
-.navBar{
-  text-align: center;
-  background-color: #e6f0ff;
-  width: 10%;
   padding: 10px;
-  border-bottom-right-radius: 15px;
   box-shadow: var(--shadow);
-  color: black;
-}
-
-.navbar a{
-  background-color: white;
-  width: 100%;
-  padding: 5%;
-  border-radius: 10px;
-  margin: 5px;
-  display: block;
-  margin-right: auto;
-  margin-left: 0px;
-}
-
-.navbar a:hover{
-  background-color: whitesmoke;
-  cursor: pointer;
-}
-
-.navBar a{
-  color: black;
-  background-color: white;
-}
-
-.navbar a:hover{
-  text-decoration: none;
 }
 
 .nav-button{
@@ -144,6 +190,45 @@ header {
 li{
   color: black;
 }
+
+.hundar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  width: 70%;
+  background-color: red;
+}
+
+.card{
+  background-color: white;
+  margin: 30px; /* Adjusted margin */
+  padding: 15px;
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: var(--shadow); /* Apply shadow */
+  transition: transform 0.3s;
+  
+}
+
+.cardText{
+  margin-left: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 10px;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 
 footer {
   background-color: #003366;
