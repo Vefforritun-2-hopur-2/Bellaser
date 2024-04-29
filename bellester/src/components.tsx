@@ -65,7 +65,7 @@ export const About = () =>{
 
 export const Main = () => {
   return(
-    <body>
+    <>
        <nav className="dogBar">
         <button className="nav-button"><i className="fa fa-calendar"></i> Tímapantanir</button>
         <a href="/login"><button className="nav-button">Þarf að passa? [+]</button></a>
@@ -135,7 +135,7 @@ export const Main = () => {
         </div>
 
       </div>
-    </body>
+    </>
   )
 }
 
