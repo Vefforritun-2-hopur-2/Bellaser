@@ -3,7 +3,7 @@ import React from 'react';
 import {Navbar,Footer} from '../components';
 import './globals.css'; 
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+export default function Layout({ children }: { children: React.ReactNode }){
   return (
     <>
       <html>
@@ -16,5 +16,3 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     </>
   );
 };
-
-export default Layout;
