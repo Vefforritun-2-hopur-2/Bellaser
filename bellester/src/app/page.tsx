@@ -4,11 +4,14 @@ import { Header, Main, Footer} from '../components'; // Adjust the path accordin
 
 function App() {
   return (
+    <>
     <div>
       {/* Other content of your application */}
       <Main />
       
     </div>
+    </>
+    
   );
 }
 
