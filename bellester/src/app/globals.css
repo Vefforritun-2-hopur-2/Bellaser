@@ -255,18 +255,27 @@ li{
   display: flex;
   margin-right: auto;
   margin-left: auto;
-  background-color: white;
-  width: 40%;
   margin-bottom: 10px;
   padding: 5px;
   border-radius: 15px;
-  box-shadow: var(--shadow);
   text-align: center;
 }
 
-.signupLogin h2 img{
-  width: 12%;
-  margin-left: 10px;
+.loginWithIcon{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  width: 50%;
+  height: 50px;
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.loginWithIcon img{
+  width: 25%;
 }
 
 .signupLogin h3{
@@ -281,7 +290,7 @@ li{
   box-shadow: var(--shadow);
 }
 
-.signupLogin a:hover, .signupLogin h2:hover{
+.signupLogin a:hover, .loginWithIcon:hover{
   background-color: #f2f2f2;
   cursor: pointer;
 }
