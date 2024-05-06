@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
 import dog from './image/dog.jpg'
-import bone from './image/bone.svg'
+import logo from './image/BellaserLogo.png'
 
 export function Linkbutton(props:{link:string,text:string})
 {
@@ -35,7 +35,7 @@ export const Header = () =>{
         </nav>
     </div>
     
-        <a href="/"><div className="logo">bellaser</div></a>
+        <a className="logo" href="/"><div className="logo">bellaser <Image src={logo} alt='logoBellaser' height={500}></Image></div></a>
         <a href="/login"><div className="profile-icon">
           <Image src={pfp} alt='profileIcon' height={500}></Image>
         </div></a>
