@@ -10,7 +10,7 @@ const Login = () => {
         <div className='loginWithIcon'><a href='/login/signin'>Login</a></div>
         
         //við munum ekki hafa google eða síma login
-        /*
+        {/*
         
         <div className='loginWithIcon'>
           <h2>Login with Google</h2>
@@ -22,7 +22,7 @@ const Login = () => {
           <Image src={phone} alt='phoneIcon' height={500} width={500}></Image>
         </div> 
         
-        */
+        */}
  
         
 

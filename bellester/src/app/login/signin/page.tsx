@@ -1,7 +1,25 @@
 'use client'
+import 'dotenv/config'
+import { initializeApp } from "firebase/app";
+require('dotenv').config()
+const firebaseConfig = {
+
+  databaseURL: process.env.databaseURL,
+};
+const app = initializeApp(firebaseConfig);
+
+import { getDatabase, ref, set } from "firebase/database";
+
+function writeUserData( userId: any,name: any, email: any) {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+  });
+}
 import React from 'react';
 
 import { Formik, Field, Form, FormikHelpers } from 'formik';
+import firebase from 'firebase/compat/app';
 const signin = () => {
   return (
     <div>  

@@ -1,4 +1,30 @@
 'use client'
+
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, set } from "firebase/database";
+require('dotenv').config()
+const firebaseConfig = {
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  databaseURL: process.env.databaseURL,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId
+};
+const app = initializeApp(firebaseConfig);
+
+
+const database = getDatabase(app);
+
+function writeUserData(userId: number, name: any, email: any) {
+  const db = getDatabase();
+  set(ref(db, 'users/' + userId), {
+    username: name,
+    email: email,
+  });
+}
+
 import React from 'react';
 
 import { Formik, Field, Form, FormikHelpers } from 'formik';
@@ -22,6 +48,7 @@ const signup = () => {
                   ) => {
                     setTimeout(() => {
                       console.log(JSON.stringify(values, null, 2))
+                      writeUserData(1,"ala","aba")
                       setSubmitting(false);
                     }, 500);
                   }}
