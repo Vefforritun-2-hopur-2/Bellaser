@@ -5,6 +5,7 @@ import pfp from './image/pfp.svg'
 import dog from './image/dog.jpg'
 import logo from './image/BellaserLogo.png'
 
+
 export function Linkbutton(props:{link:string,text:string})
 {
     return <a href={props.link}>{props.text}</a>
@@ -160,3 +161,4 @@ export const Navbar = () => {
     
   );
 };
+
