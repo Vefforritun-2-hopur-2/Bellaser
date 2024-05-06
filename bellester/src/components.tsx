@@ -128,10 +128,44 @@ export const Main = () => {
   )
 }
 
+// export const Footer = () => {
+//   return (
+//     <footer>
+//       bellaser® | 2024
+//     </footer>
+//   );
+// };
+
 export const Footer = () => {
+  const toggleDropdown = () => {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent.style.display === 'block') {
+      dropdownContent.style.display = 'none';
+    } else {
+      dropdownContent.style.display = 'block';
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <footer>
-      bellaser® | 2024
+    <footer className="bg-gray-800 text-white p-4 fixed bottom-0 w-full flex justify-between items-center">
+      <button onClick={scrollToTop} className="scroll-to-top-button">
+        ↑ Aftur efst
+      </button>
+      <center><div>bellaser® | 2024</div></center>
+      <div className="dropdown">
+        <div className="dropdown-toggle cursor-pointer" onClick={toggleDropdown}>Fleiri atriði</div>
+        <div className="dropdown-content hidden">
+          <a href="/login" className="block px-4 py-2">Bæta við pósti</a>
+          {/* Hér getur þú bætt við fleiri valmöguleikum ef þú vilt */}
+        </div>
+      </div>
     </footer>
   );
 };
