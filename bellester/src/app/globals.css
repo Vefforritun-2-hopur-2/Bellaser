@@ -195,6 +195,24 @@ header {
   padding: 5px;
   border-radius: 10px;
   gap: 20px;
+  transition: transform 0.3s;
+}
+
+.logoImage{
+  color: black;
+  display: flex;
+  font-size: 40px;
+  background-color: white;
+  width: 20%;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  gap: 20px;
+  transition: transform 0.3s;
+}
+
+.logo:hover{
+  transform: scale(1.05);
 }
 
 .dogBar{
@@ -437,6 +455,9 @@ footer {
 
 .dropdown {
   position: relative;
+  background-color: rgb(69, 128, 187);
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .dropdown-content {
@@ -457,6 +478,18 @@ footer {
   display: block;
   text-decoration: none;
   border-radius: 15px;
+}
+
+.dropdown a:hover{
+  background-color: #f2f2f2;
+}
+
+footer button:hover{
+  background-color: rgb(47, 97, 148);
+}
+
+.dropdown:hover{
+  background-color: rgb(47, 97, 148);
 }
 
 .cursor-pointer {

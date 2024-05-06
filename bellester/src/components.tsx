@@ -35,7 +35,7 @@ export const Header = () =>{
         </nav>
     </div>
     
-        <a className="logo" href="/"><div className="logo">bellaser <Image src={logo} alt='logoBellaser' height={500}></Image></div></a>
+        <a className="logo" href="/"><div className="logoImage">bellaser <Image src={logo} alt='logoBellaser' height={500}></Image></div></a>
         <a href="/login"><div className="profile-icon">
           <Image src={pfp} alt='profileIcon' height={500}></Image>
         </div></a>
