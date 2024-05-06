@@ -4,9 +4,8 @@ import React from 'react';
 import {Header, Navbar, Footer} from '../components';
 import './globals.css'; 
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+export default function Layout({ children }: { children: React.ReactNode }){
   return (
-
     
     <html>
       <body>
@@ -19,5 +18,3 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     
   );
 };
-
-export default Layout;
