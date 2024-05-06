@@ -429,16 +429,10 @@ li{
   margin-right: auto;
   margin-left: auto;
 }
-/* 
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-} */
+
+center{
+  font-size: 25px;
+}
 
 footer {
   position: fixed;
