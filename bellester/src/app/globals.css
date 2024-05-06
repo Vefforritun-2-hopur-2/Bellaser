@@ -2,17 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem; /* Breidd á hamborgaratákni */
-  height: 2rem; /* Hæð á hamborgaratákni */
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-toggle:focus {
@@ -44,9 +39,304 @@
   text-align: left;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  background-color: rgb(69, 128, 187);
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.navbar-toggle:hover{
+  transform: scale(1.1);
+}
+
+.navbar-toggle:focus {
+  outline: none;
+}
+
+/* Fyrir hverja bar (línu) í hamborgaratákni */
+.navbar-toggle span {
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  transform-origin: 1px;
+}
+
+/* Fela sjálfgefnan checkbox */
+.nav-toggle {
+  display: none;
+}
+
+/* grunn útlit fyrir valmyndina þegar hún er sýnileg */
+.nav-menu {
+  display: none; /* Byrja með að fela valmyndina */
+  flex-direction: column;
+  width: 12%; 
+  text-align: center;
+  padding: 5px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e6f0ff;
+  box-shadow: var(--shadow);
+}
+
+.nav-menu a{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 5%;
+  margin: 5px;
+  box-shadow: var(--shadow);
+}
+
+.nav-menu a:hover{
+  background-color: #f2f2f2;
+}
+
 /* Sýnir valmyndina þegar checkboxið er hakað */
 .nav-toggle:checked ~ .nav-menu {
   display: flex;
+}
+
+
+body {
+  margin-top: 7%;
+  color: black;
+  background-color: white;
+
+}
+
+*{
+  font-family: "Autour One", system-ui;
+  background-image: url('/image/bone.svg');
+  background-repeat: repeat-y;
+}
+
+header {
+  position: fixed;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.headerDiv {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1%;
+  box-shadow: var(--shadow);
+}
+
+.headerDiv a{
+  text-decoration: none;
+}
+
+.menu-icon,
+.profile-icon {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(69, 128, 187);
+  padding: 5px;
+  width: 50px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.menu-icon:hover,
+.profile-icon:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.logo{
+  color: black;
+  display: flex;
+  font-size: 40px;
+  background-color: white;
+  width: 20%;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.dogBar{
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #e6f0ff;
+  width: 40%;
+  text-align: center;
+  border-radius: 20px;
+  color: black;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+
+.nav-button{
+  background-color: #ffffff;
+  padding: 7px;
+  margin: 5px;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 10px;
+  border: none;
+  box-shadow: var(--shadow);
+  color: black;
+}
+
+.nav-button:hover {
+  background-color: #f2f2f2;
+}
+
+li{
+  color: black;
+}
+
+.hundar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* Centering the .hundar div */
+  width: 70%;
+  margin-bottom: 5%;
+}
+
+
+.card{
+  background-color: white;
+  margin: 30px; /* Adjusted margin */
+  padding: 15px;
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: var(--shadow); /* Apply shadow */
+  transition: transform 0.3s;
+  
+}
+
+.cardText{
+  margin-left: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 10px;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+.signupLogin{
+  background-color:#e6f0ff;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 30%;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.signupLogin h1{
+  font-size: 40px;
+}
+
+.signupLogin h2{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.loginWithIcon{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  width: 50%;
+  height: 50px;
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.loginWithIcon img{
+  width: 25%;
+}
+
+.signupLogin h3{
+  font-size: 25px;
+}
+
+.signupLogin a{
+  background-color: white;
+  padding: 1%;
+  border-radius: 15px;
+  width: 150%;
+  box-shadow: var(--shadow);
+}
+
+.signupLogin a:hover, .loginWithIcon:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 
