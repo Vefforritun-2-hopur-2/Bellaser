@@ -10,12 +10,33 @@
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navbar-toggle:focus {
+  outline: none;
+}
+
+/* Fyrir hverja bar (línu) í hamborgaratákni */
+.navbar-toggle span {
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* Fela sjálfgefnan checkbox */
+.nav-toggle {
+  display: none;
+}
+
+/* grunn útlit fyrir valmyndina þegar hún er sýnileg */
+.nav-menu {
+  display: none; /* Byrja með að fela valmyndina */
+  flex-direction: column;
+  width: 100%; 
+  text-align: left;
 }
 
 ::-webkit-scrollbar {
@@ -400,6 +421,7 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 
 @layer utilities {
   .text-balance {

@@ -5,7 +5,7 @@ import dog2 from '../../image/dogPhoto-2.jpg'
 import dog3 from '../../image/dogPhoto-3.jpg'
 
 
-const About = () => {
+export default function About() {
   return (
     <div className='umOkkur'>
       <h1>
@@ -27,5 +27,3 @@ const About = () => {
     </div>
   );
 };
-
-export default About;
