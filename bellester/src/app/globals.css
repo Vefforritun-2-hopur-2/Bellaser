@@ -308,6 +308,89 @@ li{
   cursor: pointer;
 }
 
+.umOkkur{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  margin-top: 15px;
+  padding: 1%;
+  border-radius: 25px;
+  background-color: #003366;
+  box-shadow: var(--shadow);
+  margin-bottom: 5%;
+}
+
+.umOkkurTexti{
+  margin-top: 10px;
+  padding: 1%;
+  text-align: center;
+  border-radius: 25px;
+  background-color: #e6f0ff;
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+.umOkkur h1{
+  text-align: center;
+  font-size: 150%;
+  background-color: white;
+  width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+.umOkkur h2{
+  font-size: 20px;
+  padding: 1%;
+}
+
+.umOkkur p{
+  margin-top: 15px;
+  padding: 1%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.umOkkur img{
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.umOkkurMyndir{
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.hjalpSida{
+  background-color: #003366;
+  width: 50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto; 
+  color: white;
+}
+
+.hjalpBox{
+  background-color: white;
+  width: 50%;
+  color: black;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 footer {
   background-color: #003366;
   color: white;
