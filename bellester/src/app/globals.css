@@ -412,22 +412,9 @@ li{
   justify-content: center;
 }
 
-.hjalpSida{
-  background-color: #003366;
-  width: 50%;
-  display: block;
-  margin-right: auto;
-  margin-left: auto; 
-  color: white;
-}
-
-.hjalpBox{
-  background-color: white;
-  width: 50%;
-  color: black;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+.umOkkurTexti a{
+  color: rgb(69, 128, 187);
+  text-decoration: underline;
 }
 
 center{
