@@ -14,7 +14,6 @@
   outline: none;
 }
 
-/* Fyrir hverja bar (línu) í hamborgaratákni */
 .navbar-toggle span {
   display: block;
   width: 2rem;
@@ -26,14 +25,12 @@
   transform-origin: 1px;
 }
 
-/* Fela sjálfgefnan checkbox */
 .nav-toggle {
   display: none;
 }
 
-/* grunn útlit fyrir valmyndina þegar hún er sýnileg */
 .nav-menu {
-  display: none; /* Byrja með að fela valmyndina */
+  display: none;
   flex-direction: column;
   width: 100%; 
   text-align: left;
@@ -72,7 +69,6 @@
   outline: none;
 }
 
-/* Fyrir hverja bar (línu) í hamborgaratákni */
 .navbar-toggle span {
   display: block;
   width: 2rem;
@@ -86,14 +82,12 @@
   transform-origin: 1px;
 }
 
-/* Fela sjálfgefnan checkbox */
 .nav-toggle {
   display: none;
 }
 
-/* grunn útlit fyrir valmyndina þegar hún er sýnileg */
 .nav-menu {
-  display: none; /* Byrja með að fela valmyndina */
+  display: none;
   flex-direction: column;
   width: 12%; 
   text-align: center;
@@ -120,7 +114,6 @@
   background-color: #f2f2f2;
 }
 
-/* Sýnir valmyndina þegar checkboxið er hakað */
 .nav-toggle:checked ~ .nav-menu {
   display: flex;
 }
@@ -314,16 +307,17 @@ li{
 }
 
 .loginWithIcon{
-  display: flex;
+  display: block;
   margin-right: auto;
   margin-left: auto;
-  padding: 1%;
   border-radius: 15px;
   margin-bottom: 15px;
   width: 50%;
-  height: 50px;
   background-color: white;
   box-shadow: var(--shadow);
+  text-align: center;
+  font-size: 40px;
+  justify-content: center;
 }
 
 .loginWithIcon img{
