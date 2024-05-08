@@ -1,33 +1,62 @@
 'use client'
-
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set } from "firebase/database";
+import { push,child } from "firebase/database";
+import { getDatabase, ref, get } from "firebase/database";
 require('dotenv').config()
 const firebaseConfig = {
-  apiKey: process.env.apiKey,
-  authDomain: process.env.authDomain,
-  databaseURL: process.env.databaseURL,
-  projectId: process.env.projectId,
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.messagingSenderId,
-  appId: process.env.appId
+  apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
+authDomain: "bellaser-73dd8.firebaseapp.com",
+databaseURL: "https://bellaser-73dd8-default-rtdb.europe-west1.firebasedatabase.app",
+projectId: "bellaser-73dd8",
+storageBucket: "bellaser-73dd8.appspot.com",
+messagingSenderId: "986734973667",
+appId: "1:986734973667:web:878f3bbdf4772ea2f3abd6"
 };
 const app = initializeApp(firebaseConfig);
 
 
 const database = getDatabase(app);
 
-function writeUserData(userId: number, name: any, email: any) {
+function writenewuser(name: any, email: any, password:any) {
   const db = getDatabase();
-  set(ref(db, 'users/' + userId), {
+  push(ref(db, 'users'), {
     username: name,
     email: email,
+    password: password,
   });
+  console.log("user written")
+}
+
+function checkemail(email:any,usern:any,password:number){
+  const dbRef = ref(getDatabase());
+  
+  get(child(dbRef, `users`)).then((snapshot) => {
+  console.log(snapshot.val())
+  let userarr = Object.entries(snapshot.val());
+  let temp
+  for(let n=0;n<userarr.length;n++){
+    temp = userarr[n][1]
+    console.log(temp.email)
+
+    if(temp.email==email){
+      alert("Email er núþegar til")
+      break
+    }
+    if(temp.email==usern){
+      alert("username er núþegar til")
+      break
+    }
+  }
+  writenewuser(usern,email,password)
+  
+  })
+  
 }
 
 import React from 'react';
 
 import { Formik, Field, Form, FormikHelpers } from 'formik';
+
 const signup = () => {
   return (
     <div>  
@@ -39,7 +68,9 @@ const signup = () => {
           <Formik
                   initialValues={{
                       username: '',
+                      email: '',
                       password: '',
+                      passwordconf: '',
                   }}
 
                   onSubmit={(
@@ -48,7 +79,12 @@ const signup = () => {
                   ) => {
                     setTimeout(() => {
                       console.log(JSON.stringify(values, null, 2))
-                      writeUserData(1,"ala","aba")
+                      if(values.password==values.passwordconf){
+                        checkemail(values.email,values.username,values.password)
+                        //
+                        
+                      }
+                      else{alert("invalid input")}
                       setSubmitting(false);
                     }, 500);
                   }}
@@ -56,7 +92,11 @@ const signup = () => {
                   <Form>
                       <Field id="username" name="username" placeholder="Username" />
                       <br/><br/>
+                      <Field id="email" name="email" placeholder="Email" />
+                      <br/><br/>
                       <Field type="password" id="password" name="password" placeholder="Password" />
+                      <br/><br/>
+                      <Field type="password" id="passwordconf" name="passwordconf" placeholder="Confirm password" />
                       <br/><br/>
                       <button type="submit">Register</button>
                   </Form>
