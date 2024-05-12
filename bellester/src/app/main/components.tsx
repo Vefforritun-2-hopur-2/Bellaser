@@ -1,9 +1,9 @@
 //setja in functions hér sem er hægt að importa
 import React from 'react';
 import Image from 'next/image';
-import pfp from './../image/pfp.jpg'
-import dog from './../image/dog.jpg'
-import logo from './../image/BellaserLogo.png'
+import pfp from '../../image/pfp.jpg'
+import dog from '../../image/dog.jpg'
+import logo from '../../image/BellaserLogo.png'
 
 export function Linkbutton(props:{link:string,text:string})
 {
