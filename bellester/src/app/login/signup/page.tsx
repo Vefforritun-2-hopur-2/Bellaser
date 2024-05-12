@@ -1,13 +1,10 @@
 'use client'
-const saltRounds = 10
-const password = "Admin@123"
 import React from 'react';
-
 import { Formik, Field, Form, FormikHelpers } from 'formik';
-
 import { initializeApp } from "firebase/app";
 import { push,child } from "firebase/database";
 import { getDatabase, ref, get } from "firebase/database";
+
 require('dotenv').config()
 const firebaseConfig = {
   apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
@@ -19,7 +16,6 @@ messagingSenderId: "986734973667",
 appId: "1:986734973667:web:878f3bbdf4772ea2f3abd6"
 };
 const app = initializeApp(firebaseConfig);
-
 
 const database = getDatabase(app);
 
@@ -41,7 +37,7 @@ function checkemail(email:any,usern:any,password:number){
   get(child(dbRef, `users`)).then((snapshot) => {
   console.log(snapshot.val())
   let userarr = Object.entries(snapshot.val());
-  let temp
+  let temp:any
   for(let n=0;n<userarr.length;n++){
     temp = userarr[n][1]
     console.log(temp.email)
@@ -76,8 +72,8 @@ const signup = () => {
                   }}
 
                   onSubmit={(
-                    values: Values,
-                    { setSubmitting }: FormikHelpers<Values>
+                    values: any,
+                    { setSubmitting }: FormikHelpers<any>
                   ) => {
                     setTimeout(() => {
                       console.log(JSON.stringify(values, null, 2))

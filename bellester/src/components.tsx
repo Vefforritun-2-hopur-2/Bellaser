@@ -1,9 +1,11 @@
 //setja in functions hér sem er hægt að importa
-import React from 'react';
+'use client'
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
 import dog from './image/dog.jpg'
 import logo from './image/BellaserLogo.png'
+
 
 
 export function Linkbutton(props:{link:string,text:string})
@@ -13,6 +15,7 @@ export function Linkbutton(props:{link:string,text:string})
 
 export const Header = () =>{
   'use client'
+  const usn: any = sessionStorage.getItem("loginas")
   return (
   <header>
     <div className="headerDiv">
@@ -44,10 +47,8 @@ export const Header = () =>{
             </div>
           </a>
           
-          <p>{sessionStorage.getItem("loginas")}</p>
+          <p>{usn}</p>
         </div>
-        
-        
     </div>
   </header>
   );

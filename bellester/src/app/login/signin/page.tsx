@@ -23,7 +23,7 @@ function loginer(user:any,pass:any){
   const dbRef = ref(getDatabase());
   get(child(dbRef, `users`)).then((snapshot) => {
   let userarr = Object.entries(snapshot.val());
-  let temp
+  let temp:any
   for(let n=0;n<userarr.length;n++){
     temp = userarr[n][1]
     
@@ -56,8 +56,8 @@ const signin = () => {
                   }}
 
                   onSubmit={(
-                    values: Values,
-                    { setSubmitting }: FormikHelpers<Values>
+                    values: any,
+                    { setSubmitting }: FormikHelpers<any>
                   ) => {
                     setTimeout(() => {
                       console.log(JSON.stringify(values, null, 2))

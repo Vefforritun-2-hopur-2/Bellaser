@@ -9,7 +9,7 @@ const Login = () => {
         <h1>Login</h1>
         <div className='loginWithIcon'><a href='/login/signin'>Login</a></div>
         
-        //við munum ekki hafa google eða síma login
+        {/*við munum ekki hafa google eða síma login*/}
         {/*
         
         <div className='loginWithIcon'>
