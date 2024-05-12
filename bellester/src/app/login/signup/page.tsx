@@ -1,4 +1,10 @@
 'use client'
+const saltRounds = 10
+const password = "Admin@123"
+import React from 'react';
+
+import { Formik, Field, Form, FormikHelpers } from 'formik';
+
 import { initializeApp } from "firebase/app";
 import { push,child } from "firebase/database";
 import { getDatabase, ref, get } from "firebase/database";
@@ -25,6 +31,8 @@ function writenewuser(name: any, email: any, password:any) {
     password: password,
   });
   console.log("user written")
+  window.location.replace("/login/signin");
+
 }
 
 function checkemail(email:any,usern:any,password:number){
@@ -38,24 +46,18 @@ function checkemail(email:any,usern:any,password:number){
     temp = userarr[n][1]
     console.log(temp.email)
 
-    if(temp.email==email){
-      alert("Email er núþegar til")
+    if(temp.email==email || temp.email==usern){
+      alert("Email/username er núþegar til")
       break
     }
-    if(temp.email==usern){
-      alert("username er núþegar til")
-      break
+    else{
+      writenewuser(usern,email,password)
+      
     }
   }
-  writenewuser(usern,email,password)
-  
-  })
-  
-}
+})}
 
-import React from 'react';
 
-import { Formik, Field, Form, FormikHelpers } from 'formik';
 
 const signup = () => {
   return (
@@ -81,7 +83,7 @@ const signup = () => {
                       console.log(JSON.stringify(values, null, 2))
                       if(values.password==values.passwordconf){
                         checkemail(values.email,values.username,values.password)
-                        //
+                        
                         
                       }
                       else{alert("invalid input")}
