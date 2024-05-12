@@ -1,6 +1,9 @@
+
 import React from 'react';
 
 import './globals.css';
+
+
 
 import { Header, Main, Footer} from '../components'; // Adjust the path accordingly
 
@@ -9,6 +12,7 @@ function App() {
     <>
 
       <div>
+        
       {/* Other content of your application */}
       <Main />
       

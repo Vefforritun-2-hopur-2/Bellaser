@@ -5,13 +5,14 @@ import pfp from './image/pfp.svg'
 import dog from './image/dog.jpg'
 import logo from './image/BellaserLogo.png'
 
+
 export function Linkbutton(props:{link:string,text:string})
 {
     return <a href={props.link}>{props.text}</a>
 }
 
 export const Header = () =>{
-
+  'use client'
   return (
   <header>
     <div className="headerDiv">
@@ -36,9 +37,17 @@ export const Header = () =>{
     </div>
     
         <a className="logo" href="/"><div className="logo">bellaser <Image src={logo} alt='logoBellaser' height={500}></Image></div></a>
-        <a href="/login"><div className="profile-icon">
-          <Image src={pfp} alt='profileIcon' height={500}></Image>
-        </div></a>
+        <div>
+          <a href="/login">
+            <div className="profile-icon">
+              <Image src={pfp} alt='profileIcon' height={500}></Image>
+            </div>
+          </a>
+          
+          <p>{sessionStorage.getItem("loginas")}</p>
+        </div>
+        
+        
     </div>
   </header>
   );
@@ -160,3 +169,4 @@ export const Navbar = () => {
     
   );
 };
+
