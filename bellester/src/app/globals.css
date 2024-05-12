@@ -177,6 +177,21 @@ header {
   cursor: pointer;
 }
 
+.profile-icon-main{
+  color: white;
+  width: 55px;
+  transition: transform 0.3s;
+}
+
+.profile-icon-main img{
+  border-radius: 15px;
+}
+
+.profile-icon-main:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 
 .logo{
   color: black;
@@ -297,35 +312,19 @@ li{
 }
 
 .signupLogin h2{
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.loginWithIcon{
+  font-size: 40px;
   display: block;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 10px;
   border-radius: 15px;
-  margin-bottom: 15px;
-  width: 50%;
-  background-color: white;
-  box-shadow: var(--shadow);
   text-align: center;
-  font-size: 40px;
-  justify-content: center;
-}
-
-.loginWithIcon img{
-  width: 25%;
 }
 
 .signupLogin h3{
   font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .signupLogin a{

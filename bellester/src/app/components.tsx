@@ -1,9 +1,9 @@
 //setja in functions hér sem er hægt að importa
 import React from 'react';
 import Image from 'next/image';
-import pfp from './image/pfp.svg'
-import dog from './image/dog.jpg'
-import logo from './image/BellaserLogo.png'
+import pfp from './../image/pfp.jpg'
+import dog from './../image/dog.jpg'
+import logo from './../image/BellaserLogo.png'
 
 export function Linkbutton(props:{link:string,text:string})
 {
@@ -35,8 +35,8 @@ export const Header = () =>{
         </nav>
     </div>
     
-        <a className="logo" href="/"><div className="logoImage">bellaser <Image src={logo} alt='logoBellaser' height={500}></Image></div></a>
-        <a href="/login"><div className="profile-icon">
+        <a className="logo" href="/main"><div className="logoImage">bellaser <Image src={logo} alt='logoBellaser' height={500}></Image></div></a>
+        <a href="/main/profile"><div className="profile-icon-main">
           <Image src={pfp} alt='profileIcon' height={500}></Image>
         </div></a>
     </div>
@@ -63,7 +63,7 @@ export const Main = () => {
 
       <div className="hundar">
 
-        <a href="/login">
+        <a href="/main/dog">
           <div className="card">
             <Image src={dog} alt='dog' height={500}></Image>
             <div className="cardText">
@@ -139,7 +139,7 @@ export const Navbar = () => {
         <div className="nav-menu hidden absolute top-full left-0 w-full bg-gray-800">
           <a href="/about" className="block text-white px-4 py-2">Um Okkur</a>
           <a href="/contact" className="block text-white px-4 py-2">Hafa Samband</a>
-          <a href="/" className="block text-white px-4 py-2">Heim</a>
+          <a href="/main" className="block text-white px-4 py-2">Heim</a>
         </div>
       </nav>
     </div>
