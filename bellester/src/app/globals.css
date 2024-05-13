@@ -269,43 +269,39 @@ li{
   cursor: pointer;
 }
 
-.signupLogin{
-  background-color:#e6f0ff;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 30%;
+.signupLogin {
+  background-color: #e6f0ff;
+  width: 25%;
   text-align: center;
   box-shadow: var(--shadow);
   border-radius: 15px;
   padding: 10px;
+  
+  /* Centering */
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.inputField{
+  padding: 1%;
+  border-radius: 10px;
 }
 
 .signupLogin h1{
   font-size: 40px;
 }
 
-.signupLogin h2{
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 15px;
-  text-align: center;
+.signupLogin button{
+  background-color: white;
+  padding: 1%;
+  border-radius: 10px;
 }
 
-.loginWithIcon{
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 1%;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  width: 50%;
-  height: 50px;
-  background-color: white;
-  box-shadow: var(--shadow);
+.signupLogin button:hover{
+  background-color: #f2f2f2;
 }
 
 .loginWithIcon img{
@@ -316,11 +312,11 @@ li{
   font-size: 25px;
 }
 
-.signupLogin a{
+.signupLogin button{
   background-color: white;
   padding: 1%;
   border-radius: 15px;
-  width: 150%;
+  width: 20%;
   box-shadow: var(--shadow);
 }
 
@@ -337,6 +333,52 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+
+.contact-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: rgb(156, 198, 240);
+  border-radius: 15px;
+  position: relative;
+  top: 20px;
+}
+
+.contact-container h1 {
+  text-align: center;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container label {
+  margin-bottom: 10px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.contact-container button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-container button:hover {
+  background-color: #0056b3;
 }
 
 
