@@ -57,7 +57,7 @@ export const Main = () => {
     <>
        <nav className="dogBar">
         <button className="nav-button"><i className="fa fa-calendar"></i> Tímapantanir</button>
-        <a href="/login"><button className="nav-button">Þarf að passa? [+]</button></a>
+        <a href="/post"><button className="nav-button">Þarf að passa? [+]</button></a>
         <button className="nav-button">Filters <i className="fa fa-th-list"></i></button>
       </nav>
 
