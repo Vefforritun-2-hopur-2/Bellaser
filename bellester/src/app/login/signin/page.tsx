@@ -17,7 +17,7 @@ const app = initializeApp(firebaseConfig);
 import { child, get, getDatabase, ref} from "firebase/database";
 import React from 'react';
 import { Formik, Field, Form, FormikHelpers } from 'formik';
-
+import firebase from 'firebase/compat/app';
 
 
 function loginer(user:any,pass:any){
