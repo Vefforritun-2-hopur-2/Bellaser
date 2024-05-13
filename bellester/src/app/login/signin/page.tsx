@@ -2,8 +2,9 @@
 import 'dotenv/config'
 import { initializeApp } from "firebase/app";
 require('dotenv').config()
+const apikey =process.env.Next_public_firebase_api_key
 const firebaseConfig = {
-apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
+apiKey: apikey,
 authDomain: "bellaser-73dd8.firebaseapp.com",
 databaseURL: "https://bellaser-73dd8-default-rtdb.europe-west1.firebasedatabase.app",
 projectId: "bellaser-73dd8",
