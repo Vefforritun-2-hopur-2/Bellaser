@@ -1,6 +1,5 @@
-//setja in functions hér sem er hægt að importa
 'use client'
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
 import dog from './image/dog.jpg'
@@ -41,7 +40,7 @@ export const Header = () =>{
     usert.innerHTML=usn
     console.log("account loded")
   }
-  setTimeout(loginedas,1000)
+  setTimeout(loginedas,5)
   return (
   <header>
     <div className="headerDiv">
@@ -89,9 +88,6 @@ export const About = () =>{
 }
 
 export const Main = () => {
-  function cardmaker(){
-
-  }
   
   function dogfecher(){
     const dbRef = ref(getDatabase());
@@ -101,34 +97,43 @@ export const Main = () => {
     for(let n=0;n<userarr.length;n++){
       temp = userarr[n][1]
       console.log(temp)
+
       let dog = document.getElementById("hundar")
       let div1 = document.createElement("div")
       div1.className="card"
       let div2 = document.createElement("div")
-      let h31 = document.createElement("h3")
-      h31.innerText=temp.dogname
+      div2.className="cardText"
+      let h31 = document.createElement("p")
+      h31.innerText="nafn: "+temp.dogName
 
       let p1 = document.createElement("p")
       let i1 = document.createElement("i")
       i1.className="fa fa-map-marker"
-      i1.innerText=temp.dogname
+      i1.innerText="staður: "+temp.stad
       p1.appendChild(i1)
       let p2 = document.createElement("p")
       let i2 = document.createElement("i")
       i2.className="fa fa-calendar"
-      i1.innerText=temp.date
+      i2.innerText="date: "+temp.date
       p2.appendChild(i2)
       let p3 = document.createElement("p")
       let i3 = document.createElement("i")
       i3.className="fa fa-money"
-      i1.innerText=temp.kr
+      i3.innerText="kr: "+temp.kr
       p3.appendChild(i3)
 
+      let img1=document.createElement("Image")
+      img1.setAttribute("src","dog")
+      img1.setAttribute("alt","dog")
+      img1.setAttribute("height","500")
+
+      
       div2.appendChild(h31)
       div2.appendChild(p1)
       div2.appendChild(p2)
       div2.appendChild(p3)
 
+      div1.appendChild(img1)
       div1.appendChild(div2)
 
 
@@ -140,7 +145,7 @@ export const Main = () => {
     })
   }
   
-  setTimeout(dogfecher,1000)
+  setTimeout(dogfecher,50)
   return(
     <>
        <nav className="dogBar">

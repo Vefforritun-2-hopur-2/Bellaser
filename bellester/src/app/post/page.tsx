@@ -28,6 +28,9 @@ function writeUserPost(dogName: string, aldur: number, stad: string, date: numbe
     window.location.replace("/");
 }
 
+if (sessionStorage.getItem("loginas")==undefined){
+  window.location.replace("/login"); 
+}
 
 const post = () => {
     return (
