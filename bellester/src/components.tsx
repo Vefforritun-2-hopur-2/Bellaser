@@ -6,14 +6,25 @@ import pfp from './image/pfp.svg'
 import dog from './image/dog.jpg'
 import logo from './image/BellaserLogo.png'
 
-
+const firebaseConfig = {
+  apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
+authDomain: "bellaser-73dd8.firebaseapp.com",
+databaseURL: "https://bellaser-73dd8-default-rtdb.europe-west1.firebasedatabase.app",
+projectId: "bellaser-73dd8",
+storageBucket: "bellaser-73dd8.appspot.com",
+messagingSenderId: "986734973667",
+appId: "1:986734973667:web:878f3bbdf4772ea2f3abd6"
+};
 
 export function Linkbutton(props:{link:string,text:string})
 {
   return <a href={props.link}>{props.text}</a>
 }
-// import Admin SDK
-const { getDatabase } = require('firebase-admin/database');
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, get } from "firebase/database";
+const app = initializeApp(firebaseConfig);
+
+const database = getDatabase(app);
 
 // Get a database referance to our blog
 const db = getDatabase();
