@@ -354,17 +354,30 @@ li{
 
 .postCreate h2{
   font-size: 40px;
-  color: white;
+  background-color: white;
+  margin: 10px;
+  border-radius: 15px;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.postCreate form{
-  width: 70%;
+.postCreate div{
   margin-right: auto;
   margin-left: auto;
   text-align: left;
   background-color: #e6f0ff;
-  padding: 2%;
   margin-bottom: 5%;
+  border-radius: 10px;
+  padding: 1%;
+  width: 90%;
+}
+
+.postCreate form{
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  background-color: #e6f0ff;
   border-radius: 10px;
 }
 

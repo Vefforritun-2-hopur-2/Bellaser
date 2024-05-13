@@ -6,7 +6,7 @@ const Post = () => {
     <div>
       <div className='postCreate'>
         <h2>Create Post</h2>
-
+        <div>
         <form>
           <div className="formText">
             <label htmlFor="name">Nafn:</label>
@@ -33,8 +33,9 @@ const Post = () => {
             <input type="text" id="cost" name="cost" />
           </div>
 
-          <a href="/"><button type="submit">Submit</button></a>
         </form>
+        <a href="/main"><button type="submit">Submit</button></a>
+      </div>
       </div>
     </div>
   );
