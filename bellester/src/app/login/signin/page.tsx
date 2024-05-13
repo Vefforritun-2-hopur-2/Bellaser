@@ -33,7 +33,6 @@ function loginer(user:any,pass:any){
     }
   
   }
-  alert("Rangt input")
   })
 }
 
