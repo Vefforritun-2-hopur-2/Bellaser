@@ -19,7 +19,7 @@ export default function Contact() {
 
   return (
     <div className="contact-container">
-      <h1>Spurningar? sendu á okkur.</h1>
+      <h1>Fyrirspurnir? Hafðu Samband</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Name:

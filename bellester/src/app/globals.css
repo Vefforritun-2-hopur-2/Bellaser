@@ -325,6 +325,90 @@ li{
   cursor: pointer;
 }
 
+
+.umOkkur{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  margin-top: 15px;
+  padding: 1%;
+  border-radius: 25px;
+  background-color: #003366;
+  box-shadow: var(--shadow);
+  margin-bottom: 5%;
+}
+
+.umOkkurTexti{
+  margin-top: 10px;
+  padding: 1%;
+  text-align: center;
+  border-radius: 25px;
+  background-color: #e6f0ff;
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+.umOkkur h1{
+  text-align: center;
+  font-size: 150%;
+  background-color: white;
+  width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+.umOkkur h2{
+  font-size: 20px;
+  padding: 1%;
+}
+
+.umOkkur p{
+  margin-top: 15px;
+  padding: 1%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.umOkkur img{
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.umOkkurMyndir{
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.umOkkurTexti a{
+  color: rgb(69, 128, 187);
+  text-decoration: underline;
+}
+
+.umOkkurTexti a button{
+  padding: 1%;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  box-shadow: var(--shadow);
+}
+
+.umOkkurTexti a button:hover{
+  background-color:#f2f2f2;
+}
+
 footer {
   background-color: #003366;
   color: white;
@@ -340,8 +424,8 @@ footer {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  background-color: rgb(156, 198, 240);
+  box-shadow: var(--shadow);
+  background-color:#e6f0ff;
   border-radius: 15px;
   position: relative;
   top: 20px;
@@ -349,6 +433,7 @@ footer {
 
 .contact-container h1 {
   text-align: center;
+  font-size: 25px;
 }
 
 .contact-container form {
@@ -365,6 +450,8 @@ footer {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 .contact-container button {
@@ -375,6 +462,7 @@ footer {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: var(--shadow);
 }
 
 .contact-container button:hover {
