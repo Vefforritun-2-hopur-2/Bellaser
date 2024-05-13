@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import pfp from '../../image/pfp.jpg'
 import dog from '../../image/dog.jpg'
+import kuro from '../../image/kuro.jpg'
 import logo from '../../image/BellaserLogo.png'
 
 export function Linkbutton(props:{link:string,text:string})
@@ -71,6 +72,18 @@ export const Main = () => {
                 <p><i className="fa fa-map-marker"></i> Mosó</p>
                 <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
                 <p><i className="fa fa-money"></i> 250.000 Kr</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="/main/dog">
+          <div className="card">
+            <Image src={kuro} alt='kuro' height={500}></Image>
+            <div className="cardText">
+                <h3>Kúró (5 ára)</h3>
+                <p><i className="fa fa-map-marker"></i>Kópavogur</p>
+                <p><i className="fa fa-calendar"></i> 13/5 - 20/5</p>
+                <p><i className="fa fa-money"></i> 25.000 Kr</p>
             </div>
           </div>
         </a>

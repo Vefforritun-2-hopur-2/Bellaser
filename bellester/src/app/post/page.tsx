@@ -29,8 +29,13 @@ const Post = () => {
           </div>
 
           <div className="formText">
-            <label htmlFor="cost">Kostur:</label>
+            <label htmlFor="cost">Verð:</label>
             <input type="text" id="cost" name="cost" />
+          </div>
+
+          <div className="formText">
+            <label htmlFor="cost">Description:</label>
+            <input className="description" type="text" id="description" name="description" />
           </div>
 
         </form>
