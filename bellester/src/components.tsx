@@ -156,66 +156,6 @@ export const Main = () => {
 
       <div className="hundar" id='hundar'>
 
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
       </div>
     </>
   )
