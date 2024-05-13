@@ -7,20 +7,14 @@ const Login = () => {
     <div>
       <div className='signupLogin'>
         <h1>Login</h1>
-        <div className='loginTemplate'></div>
-
-        <div className='loginWithIcon'>
-          <h2>Login with Google</h2>
-          <Image src={google} alt='googleLogo' height={500} width={500}></Image>
-        </div>
-
-        <div className='loginWithIcon'>
-          <h2>Login with Phone</h2>
-          <Image src={phone} alt='phoneIcon' height={500} width={500}></Image>
-        </div>  
-
+        <a href='/login/signin'>
+          <button>Login</button>
+        </a>
+        <br /><br />
         <h3>Don't have an account?</h3>
-        <a href="/signup" className="block text-white px-4 py-2">Sign Up</a>
+        <a href="/login/signup" className="block text-white px-4 py-2">
+          <button>Sign Up</button>
+        </a>
       </div>
     </div>
   );

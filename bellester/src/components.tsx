@@ -1,9 +1,12 @@
 //setja in functions hér sem er hægt að importa
-import React from 'react';
+'use client'
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
 import dog from './image/dog.jpg'
 import logo from './image/BellaserLogo.png'
+
+
 
 export function Linkbutton(props:{link:string,text:string})
 {
@@ -18,7 +21,15 @@ const ref = db.ref('server/saving-data/fireblog');
 
 
 export const Header = () =>{
-
+  'use client'
+  
+  function loginedas(){
+    const usn: any = sessionStorage.getItem("loginas")
+    const usert:any = document.getElementById("user")
+    usert.innerHTML=usn
+    console.log("account loded")
+  }
+  setTimeout(loginedas,1000)
   return (
   <header>
     <div className="headerDiv">
@@ -43,9 +54,15 @@ export const Header = () =>{
     </div>
     
         <a className="logo" href="/"><div className="logo">bellaser <Image src={logo} alt='logoBellaser' height={500}></Image></div></a>
-        <a href="/login"><div className="profile-icon">
-          <Image src={pfp} alt='profileIcon' height={500}></Image>
-        </div></a>
+        <div>
+          <a href="/login">
+            <div className="profile-icon">
+              <Image src={pfp} alt='profileIcon' height={500}></Image>
+            </div>
+          </a>
+          
+          <p id="user"></p>
+        </div>
     </div>
   </header>
   );
@@ -167,3 +184,4 @@ export const Navbar = () => {
     
   );
 };
+
