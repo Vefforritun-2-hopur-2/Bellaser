@@ -15,7 +15,14 @@ export function Linkbutton(props:{link:string,text:string})
 
 export const Header = () =>{
   'use client'
-  const usn: any = sessionStorage.getItem("loginas")
+  
+  function loginedas(){
+    const usn: any = sessionStorage.getItem("loginas")
+    const usert:any = document.getElementById("user")
+    usert.innerHTML=usn
+    console.log("account loded")
+  }
+  setTimeout(loginedas,1000)
   return (
   <header>
     <div className="headerDiv">
@@ -47,7 +54,7 @@ export const Header = () =>{
             </div>
           </a>
           
-          <p>{usn}</p>
+          <p id="user"></p>
         </div>
     </div>
   </header>
