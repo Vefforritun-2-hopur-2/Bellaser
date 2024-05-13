@@ -61,7 +61,7 @@ const signup = () => {
       <div className='signupLogin' style={{"marginTop":"11em"}}>
         <div>
           
-          <h1>Register</h1>
+          <h1>Sign Up</h1>
           
           <Formik
                   initialValues={{
@@ -88,13 +88,13 @@ const signup = () => {
                   }}
               >
                   <Form>
-                      <Field id="username" name="username" placeholder="Username" />
+                      <Field className="inputField" id="username" name="username" placeholder="Username" />
                       <br/><br/>
-                      <Field id="email" name="email" placeholder="Email" />
+                      <Field className="inputField" id="email" name="email" placeholder="Email" />
                       <br/><br/>
-                      <Field type="password" id="password" name="password" placeholder="Password" />
+                      <Field className="inputField" type="password" id="password" name="password" placeholder="Password" />
                       <br/><br/>
-                      <Field type="password" id="passwordconf" name="passwordconf" placeholder="Confirm password" />
+                      <Field className="inputField" type="password" id="passwordconf" name="passwordconf" placeholder="Confirm password" />
                       <br/><br/>
                       <button type="submit">Register</button>
                   </Form>

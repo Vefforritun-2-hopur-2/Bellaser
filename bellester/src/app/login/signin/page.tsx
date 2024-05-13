@@ -47,7 +47,7 @@ const signin = () => {
       <div className='signupLogin' style={{"marginTop":"11em"}}>
         <div>
           
-          <h1>Signin</h1>
+          <h1>Login</h1>
           
           <Formik
                   initialValues={{
@@ -67,11 +67,11 @@ const signin = () => {
                   }}
               >
                   <Form>
-                      <Field id="username" name="username" placeholder="Username" />
+                      <Field className="inputField" id="username" name="username" placeholder="Username" />
                       <br/><br/>
-                      <Field type="password" id="password" name="password" placeholder="Password" />
+                      <Field className="inputField" type="password" id="password" name="password" placeholder="Password" />
                       <br/><br/>
-                      <button type="submit">Login</button>
+                      <button type="submit">Enter</button>
                   </Form>
               </Formik>
           
