@@ -224,7 +224,7 @@ export const Main = () => {
 
 export const Footer = () => {
   const toggleDropdown = () => {
-    const dropdownContent = document.querySelector('.dropdown-content');
+    const dropdownContent:any = document.querySelector('.dropdown-content');
     if (dropdownContent.style.display === 'block') {
       dropdownContent.style.display = 'none';
     } else {
