@@ -345,6 +345,10 @@ footer {
   margin: 50px auto;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: rgb(156, 198, 240);
+  border-radius: 15px;
+  position: relative;
+  top: 20px;
 }
 
 .contact-container h1 {
