@@ -40,7 +40,7 @@ export default function Contact() {
           />
         </label>
         <label>
-          Message:
+          Skilaboð:
           <textarea
             value={message}
             onChange={e => setMessage(e.target.value)}
