@@ -1,7 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
-import phone from '../../image/phone.svg';
-import google from '../../image/google.svg';
+
 const Login = () => {
   return (
     <div>
