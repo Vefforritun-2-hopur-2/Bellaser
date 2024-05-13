@@ -16,12 +16,14 @@ messagingSenderId: "986734973667",
 appId: "1:986734973667:web:878f3bbdf4772ea2f3abd6"
 };
 
+
+
 export function Linkbutton(props:{link:string,text:string})
 {
   return <a href={props.link}>{props.text}</a>
 }
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, get } from "firebase/database";
+import { getDatabase, ref, get, child } from "firebase/database";
 const app = initializeApp(firebaseConfig);
 
 const database = getDatabase(app);
@@ -87,6 +89,58 @@ export const About = () =>{
 }
 
 export const Main = () => {
+  function cardmaker(){
+
+  }
+  
+  function dogfecher(){
+    const dbRef = ref(getDatabase());
+    get(child(dbRef, `dogs`)).then((snapshot) => {
+    let userarr = Object.entries(snapshot.val());
+    let temp:any
+    for(let n=0;n<userarr.length;n++){
+      temp = userarr[n][1]
+      console.log(temp)
+      let dog = document.getElementById("hundar")
+      let div1 = document.createElement("div")
+      div1.className="card"
+      let div2 = document.createElement("div")
+      let h31 = document.createElement("h3")
+      h31.innerText=temp.dogname
+
+      let p1 = document.createElement("p")
+      let i1 = document.createElement("i")
+      i1.className="fa fa-map-marker"
+      i1.innerText=temp.dogname
+      p1.appendChild(i1)
+      let p2 = document.createElement("p")
+      let i2 = document.createElement("i")
+      i2.className="fa fa-calendar"
+      i1.innerText=temp.date
+      p2.appendChild(i2)
+      let p3 = document.createElement("p")
+      let i3 = document.createElement("i")
+      i3.className="fa fa-money"
+      i1.innerText=temp.kr
+      p3.appendChild(i3)
+
+      div2.appendChild(h31)
+      div2.appendChild(p1)
+      div2.appendChild(p2)
+      div2.appendChild(p3)
+
+      div1.appendChild(div2)
+
+
+
+
+
+      dog?.appendChild(div1)
+    }
+    })
+  }
+  
+  setTimeout(dogfecher,1000)
   return(
     <>
        <nav className="dogBar">
@@ -95,7 +149,7 @@ export const Main = () => {
         <button className="nav-button">Filters <i className="fa fa-th-list"></i></button>
       </nav>
 
-      <div className="hundar">
+      <div className="hundar" id='hundar'>
 
         <div className="card">
           <Image src={dog} alt='dog' height={500}></Image>
