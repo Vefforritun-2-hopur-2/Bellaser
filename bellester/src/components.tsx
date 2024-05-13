@@ -3,7 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
 import dog from './image/dog.jpg'
-import logo from './image/BellaserLogo.png'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
@@ -64,7 +63,7 @@ export const Header = () =>{
         </nav>
     </div>
     
-        <a className="logo" href="/"><div className="logo">bellaser <Image src={logo} alt='logoBellaser' height={500}></Image></div></a>
+        <a className="logo" href="/"><div className="logo">bellaser</div></a>
         <div>
           <a href="/login">
             <div className="profile-icon">
@@ -160,70 +159,6 @@ export const Main = () => {
 
       <div className="hundar" id='hundar'>
 
-      {/*
-       <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <Image src={dog} alt='dog' height={500}></Image>
-          <div className="cardText">
-              <h3>Kári (2 ára)</h3>
-              <p><i className="fa fa-map-marker"></i> Mosó</p>
-              <p><i className="fa fa-calendar"></i> 13/4 - 20/4</p>
-              <p><i className="fa fa-money"></i> 25.000 Kr</p>
-          </div>
-        </div>
-
-      
-      */}
-       
       </div>
     </>
   )
