@@ -340,6 +340,52 @@ footer {
 }
 
 
+.contact-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: rgb(156, 198, 240);
+  border-radius: 15px;
+  position: relative;
+  top: 20px;
+}
+
+.contact-container h1 {
+  text-align: center;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container label {
+  margin-bottom: 10px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.contact-container button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-container button:hover {
+  background-color: #0056b3;
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
