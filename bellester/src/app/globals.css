@@ -409,17 +409,6 @@ li{
   background-color:#f2f2f2;
 }
 
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-
 .contact-container {
   max-width: 600px;
   margin: 50px auto;
@@ -469,6 +458,74 @@ footer {
   background-color: #0056b3;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #003366;
+  color: white;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  background-color: rgb(69, 128, 187);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  border-radius: 15px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.dropdown a:hover{
+  background-color: #f2f2f2;
+}
+
+footer button:hover{
+  background-color: rgb(47, 97, 148);
+}
+
+.dropdown:hover{
+  background-color: rgb(47, 97, 148);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.scroll-to-top-button {
+  background-color: rgb(69, 128, 187);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  display: inline-block; 
+}
 
 @layer utilities {
   .text-balance {
