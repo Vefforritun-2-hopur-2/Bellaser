@@ -98,7 +98,7 @@ export const Main = () => {
       temp = userarr[n][1]
       console.log(temp)
 
-      let dog = document.getElementById("hundar")
+      let dog1 = document.getElementById("hundar")
       let div1 = document.createElement("div")
       div1.className="card"
       let div2 = document.createElement("div")
@@ -122,8 +122,11 @@ export const Main = () => {
       i3.innerText="kr: "+temp.kr
       p3.appendChild(i3)
 
-      let img1=document.createElement("Image")
-      img1.setAttribute("src","dog")
+      const img1 = document.createElement("Image") as HTMLImageElement;
+      let src1=document.createAttribute("src")
+
+      // todo Image vill ekki fá src þarf að laga
+      //img1.setAttribute("src","src/image/dog.jpg")
       img1.setAttribute("alt","dog")
       img1.setAttribute("height","500")
 
@@ -140,7 +143,8 @@ export const Main = () => {
 
 
 
-      dog?.appendChild(div1)
+      dog1?.appendChild(div1)
+      
     }
     })
   }
@@ -156,7 +160,8 @@ export const Main = () => {
 
       <div className="hundar" id='hundar'>
 
-        <div className="card">
+      {/*
+       <div className="card">
           <Image src={dog} alt='dog' height={500}></Image>
           <div className="cardText">
               <h3>Kári (2 ára)</h3>
@@ -216,6 +221,9 @@ export const Main = () => {
           </div>
         </div>
 
+      
+      */}
+       
       </div>
     </>
   )
