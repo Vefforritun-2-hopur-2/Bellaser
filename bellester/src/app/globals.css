@@ -135,8 +135,6 @@ body {
 
 *{
   font-family: "Autour One", system-ui;
-  background-image: url('/image/bone.svg');
-  background-repeat: repeat-y;
 }
 
 header {
@@ -527,7 +525,7 @@ footer button:hover{
   cursor: pointer;
   font-size: 16px;
   text-align: center;
-  outline: none;
+  outline: none;  
   display: inline-block; 
 }
 
