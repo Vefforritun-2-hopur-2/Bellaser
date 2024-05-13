@@ -8,7 +8,7 @@ export default function Contact() {
   const [message, setMessage] = useState('');
 
   
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: { preventDefault: () => void; }) => {
     event.preventDefault(); 
     console.log('Sending contact info', { name, email, message });
     alert('Takk fyrir að hafa samband við munum svara eins fljótt og hægt er.');
