@@ -28,7 +28,6 @@ const database = getDatabase(app);
 
 // Get a database referance to our blog
 const db = getDatabase();
-const ref = db.ref('server/saving-data/fireblog');
 
 
 export const Header = () =>{
