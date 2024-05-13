@@ -96,7 +96,7 @@ const signup = () => {
                       <br/><br/>
                       <Field className="inputField" type="password" id="passwordconf" name="passwordconf" placeholder="Confirm password" />
                       <br/><br/>
-                      <button type="submit">Register</button>
+                      <button type="submit">Enter</button>
                   </Form>
               </Formik>
           

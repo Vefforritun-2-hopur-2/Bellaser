@@ -2,10 +2,9 @@
 import React from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
-import dog from './image/dog.jpg'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
+apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
 authDomain: "bellaser-73dd8.firebaseapp.com",
 databaseURL: "https://bellaser-73dd8-default-rtdb.europe-west1.firebasedatabase.app",
 projectId: "bellaser-73dd8",
@@ -13,8 +12,6 @@ storageBucket: "bellaser-73dd8.appspot.com",
 messagingSenderId: "986734973667",
 appId: "1:986734973667:web:878f3bbdf4772ea2f3abd6"
 };
-
-
 
 export function Linkbutton(props:{link:string,text:string})
 {
