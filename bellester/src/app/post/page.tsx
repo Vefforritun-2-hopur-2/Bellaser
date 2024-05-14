@@ -32,6 +32,7 @@ function writeUserPost(dogName: string, aldur: number, stad: string, date: numbe
     });
 }
 
+// þetta brítur kóðan. það þarf að redirecta öðruvísi
 //if (sessionStorage.getItem("loginas")==undefined){
 //  window.location.replace("/login"); 
 //}
