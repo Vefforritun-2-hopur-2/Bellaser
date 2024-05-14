@@ -17,20 +17,26 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
 function writeUserPost(dogName: string, aldur: number, stad: string, date: number, kr: number) {
     const db = getDatabase();
-    push(ref(db, 'dogs'), {
+    const newPostRef = push(ref(db, 'dogs'), {
         dogName: dogName,
         aldur: aldur,
         stad: stad,
         date: date,
         kr: kr,
     });
-    console.log("hudnur baett")
-    window.location.replace("/");
+    newPostRef.then(() => {
+        console.log("Post added successfully");
+        window.location.replace("/");
+    }).catch((error) => {
+        console.error("Error adding post:", error);
+        // Handle error
+    });
 }
 
 if (sessionStorage.getItem("loginas")==undefined){
   window.location.replace("/login"); 
 }
+
 
 const post = () => {
     return (
@@ -56,7 +62,6 @@ const post = () => {
                       console.log(JSON.stringify(values, null, 2))
                       if(values.password==values.passwordconf){
                         writeUserPost(values.dogName,values.aldur,values.stad,values.date,values.kr)
-                        
                         
                       }
                       else{alert("invalid input")}
