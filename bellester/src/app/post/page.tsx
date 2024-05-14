@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
 import { getDatabase, push, ref, set } from "firebase/database";
-import {Header, Footer } from '../../components';
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import { initializeApp } from "firebase/app";
 
@@ -33,9 +32,9 @@ function writeUserPost(dogName: string, aldur: number, stad: string, date: numbe
     });
 }
 
-if (sessionStorage.getItem("loginas")==undefined){
-  window.location.replace("/login"); 
-}
+//if (sessionStorage.getItem("loginas")==undefined){
+//  window.location.replace("/login"); 
+//}
 
 
 const post = () => {
