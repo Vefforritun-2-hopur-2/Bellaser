@@ -1,8 +1,13 @@
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
-import dogpik from "/dog.jpg"
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, get, child } from "firebase/database";
+
+import dynamic from 'next/dynamic'
+
+
 
 const firebaseConfig = {
 apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
@@ -18,25 +23,41 @@ export function Linkbutton(props:{link:string,text:string})
 {
   return <a href={props.link}>{props.text}</a>
 }
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, get, child } from "firebase/database";
+
+
+
 const app = initializeApp(firebaseConfig);
 
 const database = getDatabase(app);
 
 // Get a database referance to our blog
 const db = getDatabase();
+
+function loginedas(){
+  const usn: any = sessionStorage.getItem("loginas")
+  const usert:any = document.getElementById("user")
+  usert.innerHTML=usn
+  console.log("account loded")
+}
+
 function dogfecher(){
   const dbRef = ref(getDatabase());
   get(child(dbRef, `dogs`)).then((snapshot) => {
   let userarr = Object.entries(snapshot.val());
   let temp:any
-  
   for(let n=0;n<userarr.length;n++){
+
+
+
+
+    
     temp = userarr[n][1]
     console.log(temp)
 
+    
+
     let dog1 = document.getElementById("hundar")
+    
 
     
     let div1 = document.createElement("div")
@@ -84,20 +105,17 @@ function dogfecher(){
 
     dog1?.appendChild(div1)
     
+   
   }
+
   })
 }
 
 export const Header = () =>{
   'use client'
   
-  function loginedas(){
-    const usn: any = sessionStorage.getItem("loginas")
-    const usert:any = document.getElementById("user")
-    usert.innerHTML=usn
-    console.log("account loded")
-  }
-  setTimeout(loginedas,5)
+  
+  setTimeout(loginedas,105)
   return (
   <header>
     <div className="headerDiv">
