@@ -33,6 +33,9 @@ function writeUserPost(dogName: string, aldur: number, stad: string, date: numbe
     });
 }
 
+if (sessionStorage.getItem("loginas")==undefined){
+  window.location.replace("/login"); 
+}
 
 
 const post = () => {
