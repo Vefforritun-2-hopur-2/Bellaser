@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
+import dogpik from "/dog.jpg"
 
 const firebaseConfig = {
 apiKey: "AIzaSyBBRbx5fVL51TTYp-RjaDvaYT9k5UaBo20",
@@ -25,7 +26,67 @@ const database = getDatabase(app);
 
 // Get a database referance to our blog
 const db = getDatabase();
+function dogfecher(){
+  const dbRef = ref(getDatabase());
+  get(child(dbRef, `dogs`)).then((snapshot) => {
+  let userarr = Object.entries(snapshot.val());
+  let temp:any
+  
+  for(let n=0;n<userarr.length;n++){
+    temp = userarr[n][1]
+    console.log(temp)
 
+    let dog1 = document.getElementById("hundar")
+
+    
+    let div1 = document.createElement("div")
+    div1.className="card"
+    let div2 = document.createElement("div")
+    div2.className="cardText"
+    let h31 = document.createElement("p")
+    h31.innerText="nafn: "+temp.dogName
+
+    let p1 = document.createElement("p")
+    let i1 = document.createElement("i")
+    i1.className="fa fa-map-marker"
+    i1.innerText="staður: "+temp.stad
+    p1.appendChild(i1)
+    let p2 = document.createElement("p")
+    let i2 = document.createElement("i")
+    i2.className="fa fa-calendar"
+    i2.innerText="date: "+temp.date
+    p2.appendChild(i2)
+    let p3 = document.createElement("p")
+    let i3 = document.createElement("i")
+    i3.className="fa fa-money"
+    i3.innerText="kr: "+temp.kr
+    p3.appendChild(i3)
+
+    const img1 = document.createElement("img") as HTMLImageElement
+
+    img1.setAttribute("src","/dog.jpg")
+    img1.setAttribute("alt","dog")
+    img1.setAttribute("height","500")
+
+    
+    div2.appendChild(h31)
+    div2.appendChild(p1)
+    div2.appendChild(p2)
+    div2.appendChild(p3)
+
+    div1.appendChild(img1)
+
+    div1.appendChild(div2)
+
+
+
+
+
+    dog1?.appendChild(div1)
+    
+  }
+  })
+}
 
 export const Header = () =>{
   'use client'
@@ -85,67 +146,8 @@ export const About = () =>{
 
 export const Main = () => {
   
-  function dogfecher(){
-    const dbRef = ref(getDatabase());
-    get(child(dbRef, `dogs`)).then((snapshot) => {
-    let userarr = Object.entries(snapshot.val());
-    let temp:any
-    for(let n=0;n<userarr.length;n++){
-      temp = userarr[n][1]
-      console.log(temp)
+  setTimeout(dogfecher,90)
 
-      let dog1 = document.getElementById("hundar")
-      let div1 = document.createElement("div")
-      div1.className="card"
-      let div2 = document.createElement("div")
-      div2.className="cardText"
-      let h31 = document.createElement("p")
-      h31.innerText="nafn: "+temp.dogName
-
-      let p1 = document.createElement("p")
-      let i1 = document.createElement("i")
-      i1.className="fa fa-map-marker"
-      i1.innerText="staður: "+temp.stad
-      p1.appendChild(i1)
-      let p2 = document.createElement("p")
-      let i2 = document.createElement("i")
-      i2.className="fa fa-calendar"
-      i2.innerText="date: "+temp.date
-      p2.appendChild(i2)
-      let p3 = document.createElement("p")
-      let i3 = document.createElement("i")
-      i3.className="fa fa-money"
-      i3.innerText="kr: "+temp.kr
-      p3.appendChild(i3)
-
-      const img1 = document.createElement("Image") as HTMLImageElement;
-      let src1=document.createAttribute("src")
-
-      // todo Image vill ekki fá src þarf að laga
-      //img1.setAttribute("src","src/image/dog.jpg")
-      img1.setAttribute("alt","dog")
-      img1.setAttribute("height","500")
-
-      
-      div2.appendChild(h31)
-      div2.appendChild(p1)
-      div2.appendChild(p2)
-      div2.appendChild(p3)
-
-      div1.appendChild(img1)
-      div1.appendChild(div2)
-
-
-
-
-
-      dog1?.appendChild(div1)
-      
-    }
-    })
-  }
-  
-  setTimeout(dogfecher,50)
   return(
     <>
        <nav className="dogBar">
