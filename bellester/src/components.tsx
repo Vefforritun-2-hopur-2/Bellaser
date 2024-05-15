@@ -83,6 +83,12 @@ function dogfecher(){
     i3.innerText="kr: "+temp.kr
     p3.appendChild(i3)
 
+    let p4 = document.createElement("p")
+    let i4 = document.createElement("i")
+    i4.className="fa fa-money"
+    i4.innerText="sími: "+temp.phone
+    p4.appendChild(i4)
+
     const img1 = document.createElement("img") as HTMLImageElement
 
     img1.setAttribute("src","/dog.jpg")
@@ -94,6 +100,7 @@ function dogfecher(){
     div2.appendChild(p1)
     div2.appendChild(p2)
     div2.appendChild(p3)
+    div2.appendChild(p4)
 
     div1.appendChild(img1)
 
