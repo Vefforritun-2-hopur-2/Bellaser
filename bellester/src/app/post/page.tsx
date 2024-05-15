@@ -14,14 +14,15 @@ const firebaseConfig = {
   appId: "1:986734973667:web:878f3bbdf4772ea2f3abd6"
   };
   const app = initializeApp(firebaseConfig);
-function writeUserPost(dogName: string, aldur: number, stad: string, date: number, kr: number) {
+function writeUserPost(dogName: string, aldur: number, stad: string, date: number, Kr: number, phone: number) {
     const db = getDatabase();
     const newPostRef = push(ref(db, 'dogs'), {
         dogName: dogName,
         aldur: aldur,
         stad: stad,
         date: date,
-        kr: kr,
+        Kr: Kr,
+        phone: phone,
     });
     newPostRef.then(() => {
         console.log("Post added successfully");
@@ -51,7 +52,8 @@ const post = () => {
                       aldur: '',
                       stad: '',
                       date: '',
-                      kr: '',
+                      Kr: '',
+                      phone: ''
                   }}
 
                   onSubmit={(
@@ -60,11 +62,10 @@ const post = () => {
                   ) => {
                     setTimeout(() => {
                       console.log(JSON.stringify(values, null, 2))
-                      if(values.password==values.passwordconf){
-                        writeUserPost(values.dogName,values.aldur,values.stad,values.date,values.kr)
+                      
+                      writeUserPost(values.dogName,values.aldur,values.stad,values.date,values.Kr,values.phone)
                         
-                      }
-                      else{alert("invalid input")}
+                    
                       setSubmitting(false);
                     }, 500);
                   }}
@@ -78,9 +79,11 @@ const post = () => {
                       <br/><br/>
                       <Field className="inputField" id="date" name="date" placeholder="Dagsetning" />
                       <br/><br/>
-                      <Field className="inputField" id="kr" name="kr" placeholder="kr" />
+                      <Field className="inputField" id="Kr" name="Kr" placeholder="Kr" />
                       <br/><br/>
-                      <button type="submit">Register</button>
+                      <Field className="inputField" id="Phone" name="Phone" placeholder="Símanúmer" />
+                      <br/><br/>
+                      <button type="submit">Post</button>
                   </Form>
               </Formik>
         </div>
