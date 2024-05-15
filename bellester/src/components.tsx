@@ -65,22 +65,22 @@ function dogfecher(){
     let div2 = document.createElement("div")
     div2.className="cardText"
     let h31 = document.createElement("p")
-    h31.innerText="nafn: "+temp.dogName
+    h31.innerText="Nafn: "+temp.dogName
 
     let p1 = document.createElement("p")
     let i1 = document.createElement("i")
     i1.className="fa fa-map-marker"
-    i1.innerText="staður: "+temp.stad
+    i1.innerText="Staður: "+temp.stad
     p1.appendChild(i1)
     let p2 = document.createElement("p")
     let i2 = document.createElement("i")
     i2.className="fa fa-calendar"
-    i2.innerText="date: "+temp.date
+    i2.innerText="Date: "+temp.date
     p2.appendChild(i2)
     let p3 = document.createElement("p")
     let i3 = document.createElement("i")
     i3.className="fa fa-money"
-    i3.innerText="kr: "+temp.kr
+    i3.innerText="Kr: "+temp.kr
     p3.appendChild(i3)
 
     const img1 = document.createElement("img") as HTMLImageElement
