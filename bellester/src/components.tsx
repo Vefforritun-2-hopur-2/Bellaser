@@ -3,9 +3,14 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import pfp from './image/pfp.svg'
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, get, child } from "firebase/database";
+import { getDatabase, get, child, ref } from "firebase/database";
 
-import dynamic from 'next/dynamic'
+//import { getStorage,ref as refs} from "firebase/storage";
+
+
+// spaceRef now points to "images/space.jpg"
+// imagesRef still points to "images"
+
 
 
 
@@ -32,6 +37,23 @@ const database = getDatabase(app);
 
 // Get a database referance to our blog
 const db = getDatabase();
+/*
+function dogpics(){
+    
+  const storage = getStorage(app);
+  
+  // Create a child reference
+  const imagesRef = refs(storage, 'images');
+  // imagesRef now points to 'images'
+  
+  // Child references can also take paths delimited by '/'
+  const spaceRef = refs(storage, 'images/kuro.jpg');
+  console.log("hundapic")
+  let hundar:any = document.getElementById("1")
+  hundar.src = spaceRef
+  console.log(hundar)
+}
+*/
 
 function loginedas(){
   const usn: any = sessionStorage.getItem("loginas")
@@ -45,20 +67,21 @@ function dogfecher(){
   get(child(dbRef, `dogs`)).then((snapshot) => {
   let userarr = Object.entries(snapshot.val());
   let temp:any
+  console.log(userarr)
   for(let n=0;n<userarr.length;n++){
 
 
 
 
+    if (document.getElementById(""+n)==null){
+
     
     temp = userarr[n][1]
-    console.log(temp)
+    //console.log(temp)
 
     
 
     let dog1 = document.getElementById("hundar")
-    
-
     
     let div1 = document.createElement("div")
     div1.className="card"
@@ -91,6 +114,7 @@ function dogfecher(){
 
     const img1 = document.createElement("img") as HTMLImageElement
 
+    img1.setAttribute("id",n)
     img1.setAttribute("src","/dog.jpg")
     img1.setAttribute("alt","dog")
     img1.setAttribute("height","500")
@@ -111,7 +135,7 @@ function dogfecher(){
 
 
     dog1?.appendChild(div1)
-    
+    }
    
   }
 
@@ -172,6 +196,8 @@ export const About = () =>{
 export const Main = () => {
   
   setTimeout(dogfecher,90)
+
+  //setTimeout(dogpics,150)
 
   return(
     <>
