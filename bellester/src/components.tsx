@@ -73,7 +73,7 @@ function dogfecher(){
 
 
 
-    if (document.getElementById(""+n)==null){
+
 
     
     temp = userarr[n][1]
@@ -135,7 +135,7 @@ function dogfecher(){
 
 
     dog1?.appendChild(div1)
-    }
+    
    
   }
 
