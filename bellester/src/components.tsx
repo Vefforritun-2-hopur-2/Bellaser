@@ -114,7 +114,6 @@ function dogfecher(){
 
     const img1 = document.createElement("img") as HTMLImageElement
 
-    img1.setAttribute("id",n)
     img1.setAttribute("src","/dog.jpg")
     img1.setAttribute("alt","dog")
     img1.setAttribute("height","500")
