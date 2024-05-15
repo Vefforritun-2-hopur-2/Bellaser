@@ -41,7 +41,7 @@ function writeUserPost(dogName: string, aldur: number, stad: string, date: numbe
 const post = () => {
     return (
                 <div>  
-      <div className='signupLogin' style={{"marginTop":"11em"}}>
+      <div className='signupLogin' style={{"marginTop":"13em"}}>
         <div>
           
           <h1>Create post</h1>
