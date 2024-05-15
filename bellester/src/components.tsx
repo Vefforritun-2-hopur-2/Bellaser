@@ -103,7 +103,7 @@ function dogfecher(){
     let p3 = document.createElement("p")
     let i3 = document.createElement("i")
     i3.className="fa fa-money"
-    i3.innerText="Kr: "+temp.kr
+    i3.innerText="Kr: "+temp.Kr
     p3.appendChild(i3)
 
     let p4 = document.createElement("p")
